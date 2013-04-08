@@ -1,0 +1,40 @@
+Textpad 6:
+
+Run installer.exe.
+This is a single user install.
+
+Textpad 5:
+(Sorry this is not easier yet)
+
+The syntax files are in the src directory.
+
+All Users:
+Place the .syn files in 
+  %ProgramFiles(X86)%\TextPad 5\Samples
+(or wherever your Textpad program is located)
+
+Single User:
+Place the .syn files in 
+  %APPDATA%\Helios\TextPad\5.0\
+(or whichever version you are running)
+
+Then open Textpad, and 
+  Configure -> New Document Class -> Document class name
+  "lfp"
+  next
+  "*lfp"
+  next
+  check "enable syntax highlighting"
+  select lfp.syn
+  next
+  finish
+
+  (alt-c -> c -> lfp -> {Enter} -> *.lfp -> {Enter} -> alt-n -> alt-d -> 
+  lfp -> {Enter} -> {Enter})
+
+  Then,
+  Configure -> Preferences -> Document Classes -> lfp -> colors
+  and make sure that all of the keyword types are different colors.
+
+
+

@@ -1,0 +1,65 @@
+; Syntax file for Ipro lfp files 
+; contributed by Noah Birnel
+
+C=1
+
+[Syntax]
+Namespace1 = 6
+IgnoreCase = Yes
+InitKeyWordChars = A-Za-z
+KeyWordChars = A-Za-z
+KeywordLength = 
+BracketChars = 
+OperatorChars = 
+PreprocStart = 
+SyntaxStart = 
+SyntaxEnd = 
+CommentStart =
+CommentEnd =
+SingleComment = ##
+SingleCommentCol = 1
+SingleCommentAlt =
+SingleCommentColAlt =
+StringStart = ;
+StringEnd = ;
+StringEsc = ;
+CharStart = ,
+CharEnd = ,
+CharEsc = ,
+
+
+[Keywords 1]
+im
+
+[Keywords 2]
+vn
+
+[Keywords 3]
+io
+is
+
+[Keywords 4]
+bf
+bm
+
+[Keywords 5]
+in
+lc
+of
+oi
+ot
+rS
+rt
+sr
+vf
+rp
+br
+ck
+da
+dt
+fn
+ft
+ia
+
+[Keywords 6]
+rr

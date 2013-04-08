@@ -1,0 +1,95 @@
+; Syntax file for Summation dii files 
+; contributed by Noah Birnel
+
+C=1
+
+[Syntax]
+Namespace1 = 6
+IgnoreCase = No
+InitKeyWordChars = @
+KeyWordChars = A-Z@
+KeywordLength = 
+BracketChars = 
+OperatorChars = 
+PreprocStart = 
+SyntaxStart = 
+SyntaxEnd = 
+CommentStart =
+CommentEnd =
+SingleComment = ;
+SingleCommentCol = 1
+SingleCommentAlt =
+SingleCommentColAlt =
+StringStart = 
+StringEnd = 
+StringEsc = 
+CharStart = 
+CharEnd = 
+CharEsc = 
+
+[Keywords 1]
+@T
+
+[Keywords 2]
+@D
+@I
+@V
+
+[Keywords 3]
+@C
+
+[Keywords 4]
+@ATTACHMENT
+@EDOC
+@MEDIA
+
+[Keywords 5]
+@FULLTEXT
+@NOPAGECOUNT
+
+[Keywords 6]
+@APPLICATION
+@ATTACH
+@ATTACHRANGE
+@ATTMSG
+@AUXID
+@BATESBEG
+@BATESEND
+@BCC
+@BODY
+@CC
+@DATECREATED
+@DATERCVD
+@DATESAVED
+@DATESENT
+@DATESENT
+@DOCID
+@EATTACH
+@EDOCIDSEP
+@EMAIL-BODY
+@FOLDERNAME
+@FROM
+@FROM
+@FULLTEXTDIR
+@HEADER
+@INTMSGID
+@L
+@MSGID
+@MULTILINE
+@O
+@OCR
+@OCR-END
+@PARENTID
+@PSTCOMMENT
+@PSTCOMMENT-END
+@PSTFILE
+@READ
+@RELATED
+@STOREID
+@SUBJECT
+@SUBJECT
+@TIMERCVD
+@TIMESENT
+@TO
+@TO
+@TRANS
