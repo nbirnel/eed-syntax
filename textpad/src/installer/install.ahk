@@ -19,6 +19,7 @@ Loop,
 }
 
 tp_config = %tp_folder%\ConfigState.xml
+;FIXME add date here. Add some messages for Windows type folks.
 tp_config_bak = %tp_folder%\ConfigState.xml.bak
 tp_config_tmp = newConfigState.xml
 config_install = config
@@ -30,7 +31,7 @@ opt_not_set = 1
 
 FileCopy, %tp_config%, %tp_config_bak%, 1
 FileDelete, %tp_config_tmp%
-; FIXME breaking on vendor
+
 Loop
 {
     FileReadLine, line, %tp_config%, %A_Index%
