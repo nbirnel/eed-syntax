@@ -35,6 +35,3 @@ Then open Textpad, and
   Then,
   Configure -> Preferences -> Document Classes -> lfp -> colors
   and make sure that all of the keyword types are different colors.
-
-
-
