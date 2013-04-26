@@ -1,4 +1,23 @@
-tp_folder = %APPDATA%\Helios\TextPad\6
+tp_root = %APPDATA%\Helios\TextPad\
+
+latest = 7
+oldest = 6
+try = %latest%
+Loop, 
+{
+    IfExist, %tp_root%\%try%
+    {
+        tp_folder = %tp_root%\%try%
+        break
+    }
+    try--
+    if (try < oldest)
+    {
+        MsgBox You lose! No TextPad 6 or 7: you must manually install.
+        ExitApp
+    }
+}
+
 tp_config = %tp_folder%\ConfigState.xml
 tp_config_bak = %tp_folder%\ConfigState.xml.bak
 tp_config_tmp = newConfigState.xml
@@ -11,7 +30,7 @@ opt_not_set = 1
 
 FileCopy, %tp_config%, %tp_config_bak%, 1
 FileDelete, %tp_config_tmp%
-
+; FIXME breaking on vendor
 Loop
 {
     FileReadLine, line, %tp_config%, %A_Index%
