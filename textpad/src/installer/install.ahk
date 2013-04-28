@@ -1,5 +1,3 @@
-tp_root = %APPDATA%\Helios\TextPad\
-
 Loop, 
 {
     Process, Exist, TextPad.exe
@@ -20,6 +18,7 @@ Loop,
     }
 }
 
+tp_root = %APPDATA%\Helios\TextPad
 latest = 7
 oldest = 6
 try = %latest%
@@ -40,8 +39,7 @@ Loop,
 }
 
 tp_config = %tp_folder%\ConfigState.xml
-;FIXME add date here. Add some messages for Windows type folks.
-tp_config_bak = %tp_folder%\ConfigState.xml.bak
+tp_config_bak = %tp_folder%\ConfigState.xml-%A_Now%.bak
 tp_config_tmp = newConfigState.xml
 config_install = config
 src = src
@@ -73,6 +71,7 @@ Filecopy, %src%\lfp.syn, %tp_folder%
 Filecopy, %src%\opt.syn, %tp_folder%
 FileCopy, %tp_config_tmp%, %tp_config%, 1
 
+;FIXME lousy formatting
 MsgBox Installed to %tp_folder%. If this didn't work well, replace %tp_config% with %tp_config_bak%
 
 while_in_classes(line) {
