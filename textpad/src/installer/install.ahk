@@ -1,5 +1,25 @@
 tp_root = %APPDATA%\Helios\TextPad\
 
+Loop, 
+{
+    Process, Exist, TextPad.exe
+    tp_PID = %ErrorLevel%
+    if tp_PID = 0
+        break
+    else
+    {
+        tp_run_ck++
+        if tp_run_ck = 3
+        {
+            MsgBox, You're not listening, or there is a bug in this code. I'm outta here.
+            ExitApp
+        }
+        MsgBox, 1, , It looks like you have TextPad running. You'll need to close out all instances of TextPad before I can continue.
+        IfMsgBox, Cancel
+            ExitApp
+    }
+}
+
 latest = 7
 oldest = 6
 try = %latest%
@@ -13,6 +33,7 @@ Loop,
     try--
     if (try < oldest)
     {
+        ;FIXME - try to get a path from the user.
         MsgBox You lose! No TextPad 6 or 7: you must manually install.
         ExitApp
     }
@@ -51,6 +72,8 @@ Filecopy, %src%\dii.syn, %tp_folder%
 Filecopy, %src%\lfp.syn, %tp_folder%
 Filecopy, %src%\opt.syn, %tp_folder%
 FileCopy, %tp_config_tmp%, %tp_config%, 1
+
+MsgBox Installed to %tp_folder%. If this didn't work well, replace %tp_config% with %tp_config_bak%
 
 while_in_classes(line) {
     global in_classes
