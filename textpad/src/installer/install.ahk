@@ -71,6 +71,7 @@ Filecopy, %src%\lfp.syn, %tp_folder%
 Filecopy, %src%\opt.syn, %tp_folder%
 FileCopy, %tp_config_tmp%, %tp_config%, 1
 
+FileDelete, %tp_config_tmp%
 ;FIXME lousy formatting
 MsgBox Installed to %tp_folder%. If this didn't work well, replace %tp_config% with %tp_config_bak%
 
