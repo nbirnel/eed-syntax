@@ -4,3 +4,7 @@ dist ::
 
 push ::
 	scp textpad-eed-syntax.zip noah@www.birnel.org:~/birnel.org/birnel.org/~noah/software/textpad-eed-syntax
+
+clean ::
+	rm -f textpad-eed-syntax.zip
+
