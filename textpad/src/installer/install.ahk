@@ -10,11 +10,11 @@ Loop,
         if tp_run_ck = 3
         {
             MsgBox, You're not listening, or there is a bug in this code. I'm outta here.
-            ExitApp
+            ExitApp 1
         }
         MsgBox, 1, , It looks like you have TextPad running. You'll need to close out all instances of TextPad before I can continue.
         IfMsgBox, Cancel
-            ExitApp
+            ExitApp 1
     }
 }
 
@@ -34,7 +34,7 @@ Loop,
     {
         ;FIXME - try to get a path from the user.
         MsgBox You lose! No TextPad 6 or 7: you must manually install.
-        ExitApp
+        ExitApp 1
     }
 }
 
@@ -62,8 +62,15 @@ Loop
     {
         ifInString, line, <Document-Classes>
             in_classes = 1
+            found_classes = 1
     }
     FileAppend, %line%`n, %tp_config_tmp%
+}
+
+if found_classes != 1
+{
+    MsgBox, Something went wrong. Bailing out without doing anything.
+    ExitApp 1
 }
 
 Filecopy, %src%\dii.syn, %tp_folder%
